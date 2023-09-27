@@ -243,11 +243,13 @@ def propToType(property_definition):
 
 
 def do_register(ComponentClass):
-    register_component(ComponentClass)
-    __components_registry[ComponentClass.get_name()] = ComponentClass
+    if not ComponentClass.is_registered:
+        register_component(ComponentClass)
+        __components_registry[ComponentClass.get_name()] = ComponentClass
 
 
 def do_unregister(ComponentClass):
     if ComponentClass.is_registered:
         unregister_component(ComponentClass)
         __components_registry.pop(ComponentClass.get_name())
+        print("component is registed?", ComponentClass.is_registered)
