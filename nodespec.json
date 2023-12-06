@@ -2537,16 +2537,16 @@
     "configuration": []
   },
   {
-    "type": "hubs/misc/iframeopen",
+    "type": "hubs/misc/changehub",
     "category": "Components",
-    "label": "Open Iframe",
+    "label": "Change Hub",
     "inputs": [
       {
         "name": "flow",
         "valueType": "flow"
       },
       {
-        "name": "text",
+        "name": "url",
         "valueType": "string",
         "defaultValue": ""
       }
